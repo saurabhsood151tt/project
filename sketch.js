@@ -6,7 +6,7 @@ function preload(){
   //loadImage of the path
   pathImg = loadImage("path.png");
   //loadAnimation of the boy
- boyImg = loadAnimation("Jake1.png","Jake2.png","jake3.png","jake4.png","jake5.png");
+ boyImg = loadAnimation("Jake1.png","Jake2.png","jake3.png","jake4.PNG","jake5.png");
 }
 
 function setup(){
@@ -50,13 +50,8 @@ function draw() {
   edges= createEdgeSprites();
   boy.collide(edges[3]);
   // collide the boy with the left and right invisible boundaries.
+  boy.x=World.mouseX;
   
-  if(keyDown("right")){
- boy.velocityX=2;
-  }
-  if(keyDown("left")){
-    boy.velocityX=-2;
-     }
   //code to reset the background
   if(path.y > 400 ){
     path.y = height/2;
